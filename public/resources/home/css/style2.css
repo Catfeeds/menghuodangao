@@ -1,0 +1,79 @@
+.cou_list dt a{display: block;width: 590px;height: 320px;}
+.cou_list dt{width: 590px;height: 320px;padding: 0;}
+
+.cou_list .box .p3{overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:5;-webkit-box-orient:vertical;}
+.cou_list .box .p2{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+.list5{width: 100%;margin-left: -30px;width: 1195px;}
+.list5 li{float: left;width: 565px;border-right: 1px solid #ccc;padding-left: 30px;}
+.list5 li i{margin-right: 20px;}
+.list5 li:nth-child(2n){border-right: 0;}
+
+.student li p em{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+.baby .w .con{font-size: 14px; color: #595959; line-height: 24px; }
+
+.index_1{padding-bottom: 35px;height: auto;}
+.index_2{padding-bottom: 35px;height: auto;}
+
+.school .list4 li .pic{height: auto;}
+
+
+.fewm{
+	padding-top: 45px;
+	text-align: right;
+}
+.fewm.bdshare-button-style2-16 a{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 29px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/ic11.png) 0 0 no-repeat;
+	margin-right: 7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	padding:0;
+}
+.fewm a:nth-child(2){
+	background-position-x: -30px;
+}
+.fewm a:nth-child(3){
+	background-position-x: -60px;
+}
+.fewm a:hover{
+	transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+}
+.fewm .ewm{
+	display: inline-block;
+	vertical-align: top;
+	width: 88px;
+	height: 88px;
+	margin-left: 26px;
+}
+
+.page{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 35px;
+	line-height: 24px;
+}
+.page li{
+	float: left;
+	color: #000;
+	margin: 0 10px;
+}
+.page a:hover,
+.page a.on{
+	color: #22b6aa;
+}
+
+.layout img{max-width: 100%;width: auto;}
+
+
+.course-info img{max-width: 100%;width: auto;margin:0 auto;display: block;}
