@@ -96,8 +96,11 @@ class Article extends Model
         }
         if(isset($attributes['order'])&&trim($attributes['order'])!=''){
             $list = $list->orderBy($attributes['order'],$attributes['sort']);
+            if($attributes['order']=='is_top'){
+                $list = $list->where('is_top',1);
+            }
         }
-        $list = $list->orderBy("add_time","DESC")->orderBy("id","DESC");
+        $list = $list->orderBy("sort_order","DESC")->orderBy("add_time","DESC")->orderBy("id","DESC");
         if(isset($attributes['take'])&&trim($attributes['take'])!=''){
             $list = $list->take($attributes['take'])->get();
         }else{

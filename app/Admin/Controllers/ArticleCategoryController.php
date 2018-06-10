@@ -130,7 +130,8 @@ EOT;
             $form->text('seo_description', 'seo description');
             $form->image('img', '图片')->move('/uploads/article/'.date('Ymd'))->uniqueName();
             $form->text('alt', '图片alt');
-            // $form->image('img2', 'banner')->move('/uploads/article/'.date('Ymd'))->uniqueName();
+            $form->image('img2', '图片2')->move('/uploads/article/'.date('Ymd'))->uniqueName();
+            $form->text('alt2', '图片alt2');
 
             // $form->display('created_at', '创建日期');
             // $form->display('updated_at', '更新日期');

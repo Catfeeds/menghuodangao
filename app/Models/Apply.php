@@ -9,7 +9,9 @@ use App\Models\ArticleCategory;
 class Apply extends Model
 {
     protected $table = 'apply';
-    
+    public function ArticleTo(){
+        return $this->belongsTo('App\Models\Article','course_id','id');
+    }
     static public function ApplySave($attributes=array()){
         if($attributes['id']>0){
         	$info = Apply::find($attributes['id']);
@@ -21,7 +23,10 @@ class Apply extends Model
         	$info->name = $attributes['name'];
         }
         if(isset($attributes['phone'])){
-        	$info->phone = $attributes['phone'];
+            $info->phone = $attributes['phone'];
+        }
+        if(isset($attributes['course_id'])){
+        	$info->course_id = $attributes['course_id'];
         }
         if(isset($attributes['age'])){
         	$info->age = $attributes['age'];

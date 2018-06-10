@@ -30,6 +30,10 @@ return [
 
 		'school'=>"在校实况",
 
+		'student-story-index'=>"创业学员故事",
+		'student-story'=>"学员故事",
+		'media-witness'=>"媒体见证",
+
 		// 'personnel'=>"人员列表",
 
 		// 'our-works'=>"作品展示",
@@ -66,6 +70,10 @@ return [
 
 		'value-added-services'=>"300",
 
+		'student-story'=>"390",
+		'student-story-index'=>"390",
+		'media-witness'=>"390",
+
 		// 'personnel'=>"200",
 
 		// 'our-works'=>"450",
@@ -101,6 +109,10 @@ return [
 		'school'=>"308",
 
 		'value-added-services'=>"300",
+
+		'student-story'=>"260",
+		'student-story-index'=>"260",
+		'media-witness'=>"260",
 
 		// 'personnel'=>"200",
 

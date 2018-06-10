@@ -90,7 +90,7 @@ class ArticleController extends Controller
             $grid->disableExport();
             $grid->paginate(15);
             //默认排序
-            $grid->model()->orderBy('add_time','DESC');
+            $grid->model()->orderBy('is_top','DESC')->orderBy('sort_order','DESC')->orderBy('add_time','DESC');
 
             $grid->id('ID')->sortable();
             $grid->column('title',"标题");
@@ -103,11 +103,12 @@ class ArticleController extends Controller
             ];
             $grid->is_top('推荐')->switch($states);
             $grid->add_time('创建日期')->sortable();
+            $grid->sort_order('排序值')->sortable();
 
             
             $grid->actions(function ($actions) {
                 $row = $actions->row;
-                // $actions->prepend('<a href="/admin/more-image?cate_id=1&more_id='.$row['id'].'"><i class="fa fa-image"></i></a>');
+                $actions->prepend('<a href="/admin/more-image?cate_id=1&more_id='.$row['id'].'"><i class="fa fa-image"></i></a>');
             });
             if($request['cate_id']>0){
                 $grid->urlCreateButton('/admin/article/create?cate_id='.$request['cate_id']);//修改添加按钮链接
@@ -158,6 +159,7 @@ class ArticleController extends Controller
 
             $form->select('cate_id','所属分类')->options($cate_options)->rules('required')->default($request['cate_id']);
             $form->textarea('desc','描述')->rows(3);
+            $form->textarea('desc2','描述2')->rows(3);
             $form->editor('content','内容');
             $form->image('img','图片')->move('/uploads/article/'.date('Ymd'))->uniqueName();
             $form->text('alt','图片alt');
@@ -170,12 +172,15 @@ class ArticleController extends Controller
                 'off' => ['value' => 0, 'text' => '否', 'color' => 'danger'],
             ];
             $form->switch('is_top','推荐')->states($states);
+            $form->number('sort_order', '排序值')->default('50');
             $form->datetime('add_time','创建日期')->format('YYYY-MM-DD HH:mm:ss')->default(date('Y-m-d H:i:s'));
             $form->text('seo_title', 'seo title');
             $form->text('seo_keywords', 'seo keywords');
             $form->text('seo_description', 'seo description');
             // $form->text('job_title', '职称');
             $form->text('video', '视频链接');
+            $form->text('tag','标签');
+            $form->text('day','天数');
 
             // $form->html('', $label = '知识解答');
             // $form->divide();

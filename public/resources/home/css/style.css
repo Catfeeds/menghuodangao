@@ -1,4 +1,4 @@
-@charset "utf-8";
+	@charset "utf-8";
 html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset{margin:0;padding:0}
 ul,ol,dl{list-style-type:none}
 address,caption,cite,code,dfn,em,th,var,i,b{font-style:normal;font-weight:normal}
@@ -65,6 +65,7 @@ img{
 	-moz-transition:all 0.5s;
 	-webkit-transition:all 0.5s;
 	-ms-transition:all 0.5s;
+	width: 333px;height: 320px;
 }
 .pich:hover img{
 	transform:scale(1.1);
@@ -233,6 +234,8 @@ img{
 	width: 333px;
 	height: 320px;
 }
+.cou_list .pich img{width: 333px;
+	height: 320px;}
 .cou_list .box{
 	padding: 17px 10px 0;
 	width: 237px;
@@ -438,6 +441,7 @@ img{
 	height: 280px;
 	overflow: hidden;
 }
+.index_3 .picshow .fl .pich img{width: 100%;height: 280px;}
 .index_3 .picshow .fr{
 	width: 610px;
 }
@@ -447,6 +451,7 @@ img{
 	height: 280px;
 	margin-left: 10px;
 }
+.index_3 .picshow .fr .pich img{width: 298px;height: 280px;}
 .index_3 .picshow .pich p{
     position: absolute;
     left: 0;
@@ -747,6 +752,7 @@ img{
 	width: 448px;
 	height: 610px;
 }
+.index_7 dt img{width: 448px;height: 610px;}
 .index_7 dl a p{
 	position: absolute;
 	left: 0;
@@ -770,6 +776,7 @@ img{
 	width: 188px;
 	height: 305px;
 }
+.index_7 dl dd .pic img{width: 188px;height: 305px;}
 .index_8{
 	padding: 0 0 66px;
 }
@@ -1803,7 +1810,7 @@ img{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	padding-top: 7px;
-	line-height: 20px;
+	line-height: 20px;height: 52px;overflow: hidden;
 }
 .student li p em{
 	display: block;
