@@ -54,7 +54,7 @@ return [
 
 		'cases'=>"283",
 
-		'teacher'=>"387",
+		'teacher'=>"448",
 
 		'contact-us'=>"0",
 
@@ -70,9 +70,9 @@ return [
 
 		'value-added-services'=>"300",
 
-		'student-story'=>"390",
-		'student-story-index'=>"390",
-		'media-witness'=>"390",
+		'student-story'=>"283",
+		'student-story-index'=>"283",
+		'media-witness'=>"283",
 
 		// 'personnel'=>"200",
 
@@ -90,11 +90,11 @@ return [
 
 		'news'=>"440",
 
-		'works'=>"812",
+		'works'=>"798",
 
-		'cases'=>"238",
+		'cases'=>"189",
 
-		'teacher'=>"410",
+		'teacher'=>"762",
 
 		'contact-us'=>"0",
 
@@ -110,9 +110,9 @@ return [
 
 		'value-added-services'=>"300",
 
-		'student-story'=>"260",
-		'student-story-index'=>"260",
-		'media-witness'=>"260",
+		'student-story'=>"189",
+		'student-story-index'=>"189",
+		'media-witness'=>"189",
 
 		// 'personnel'=>"200",
 
