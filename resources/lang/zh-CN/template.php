@@ -30,6 +30,10 @@ return [
 
 		'school'=>"在校实况",
 
+		'student-story-index'=>"创业学员故事",
+		'student-story'=>"学员故事",
+		'media-witness'=>"媒体见证",
+
 		// 'personnel'=>"人员列表",
 
 		// 'our-works'=>"作品展示",
@@ -50,7 +54,7 @@ return [
 
 		'cases'=>"283",
 
-		'teacher'=>"387",
+		'teacher'=>"448",
 
 		'contact-us'=>"0",
 
@@ -65,6 +69,10 @@ return [
 		'school'=>"324",
 
 		'value-added-services'=>"300",
+
+		'student-story'=>"283",
+		'student-story-index'=>"283",
+		'media-witness'=>"283",
 
 		// 'personnel'=>"200",
 
@@ -82,11 +90,11 @@ return [
 
 		'news'=>"440",
 
-		'works'=>"812",
+		'works'=>"798",
 
-		'cases'=>"238",
+		'cases'=>"189",
 
-		'teacher'=>"410",
+		'teacher'=>"762",
 
 		'contact-us'=>"0",
 
@@ -101,6 +109,10 @@ return [
 		'school'=>"308",
 
 		'value-added-services'=>"300",
+
+		'student-story'=>"189",
+		'student-story-index'=>"189",
+		'media-witness'=>"189",
 
 		// 'personnel'=>"200",
 

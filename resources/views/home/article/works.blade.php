@@ -12,7 +12,7 @@
         <ul class="clearfix" data-pswp-uid="1">
             @foreach($article_list as $k=>$v)
             <li>
-                <a href="{{asset($v['img'])}}" data-size="1194x812"><div class="pic"><img src="{{asset($v['img'])}}" alt="{{$v['alt']}}"></div></a>
+                <a href="{{asset($v['img'])}}" data-size="1194x798"><div class="pic"><img src="{{asset($v['img'])}}" alt="{{$v['alt']}}"></div></a>
                 <p title="{{$v['title']}}">{{$v['title']}}</p>
             </li>
             @endforeach

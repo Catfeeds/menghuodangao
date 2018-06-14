@@ -18,5 +18,7 @@ return [
 		'top_desc'=>"顶部描述",
 		'pingpai'=>"品牌描述",
 		'lianxiren'=>"联系人",
+		'tel_phone'=>"手机号码",
+		'kefu_53'=>"客服链接",
 	],
 ];

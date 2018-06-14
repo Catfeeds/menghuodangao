@@ -52,6 +52,21 @@ class ArticleController extends Controller
             'sort'=>'DESC',
             'take'=>12,
         ]);
+        //获取所有课程
+        $course =Article::ArticleList([
+            'cate_id_in'=>sub_cate_in(6),
+            'paginate'=>0,
+        ]);
+        $course_menu = ArticleCategory::orderBy('order',"ASC")->where('parent_id',6)->get();//获取一级分类
+        foreach($course_menu as $k=>$v){
+            $v['article'] = Article::ArticleList([
+                'cate_id'=>$v['id'],
+                'order'=>'is_top',
+                'sort'=>'DESC',
+                'paginate'=>0,
+            ]);
+        }
+        
         $assign = [
             // 'url'              =>$url,
             'url'              => [
@@ -68,6 +83,8 @@ class ArticleController extends Controller
             'head_keywords'      => !empty($cate_info['seo_keywords'])?$cate_info['seo_keywords']:$cate_info['title'],
             'head_description'   => !empty($cate_info['seo_description'])?$cate_info['seo_description']:$cate_info['title'],
             'location'           => $location,
+            'course_menu'  => $course_menu,
+            'is_course_menu'    => 1,
         ];
         // $AdsPosition = AdsPosition::where('title',$cate_info['title'])->first();//获取广告位
         // if($AdsPosition){
@@ -97,9 +114,13 @@ class ArticleController extends Controller
                     ]);
                 }
                 $assign['sub_category'] = $sub_category;
+                if(isMobile()){
+                    $assign['banner'] = ads_image_name("手机-".$top_category['title']);
+                }
                 break;
             case 'contact-us'://萌货故事
             case 'single-detail'://萌货故事
+            case 'student-story-index'://故事列表
                 $cate_list = ArticleCategory::orderBy('order',"ASC")->where('parent_id',$cate_info['id'])->get();//获取一级分类
                 foreach($cate_list as $k=>$v){
                     $v['article'] = Article::ArticleList([
@@ -109,17 +130,27 @@ class ArticleController extends Controller
                     ]);
                 }
                 $assign['cate_list'] = $cate_list;
-                $assign['banner'] = ads_image_name($top_category['title']);
+                if(isMobile()){
+                    $assign['banner'] = ads_image_name("手机-".$top_category['title']);
+                }else{
+                    $assign['banner'] = ads_image_name($top_category['title']);
+                }
                 break;
             case 'news'://新闻列表
             case 'school'://新闻列表
             case 'works'://作品
             case 'cases'://案例
             case 'teacher'://师资
+                if(isMobile()){
+                    $paginate = 16;
+                }else{
+                    $paginate = 12;
+                }
                 //获取列表数据
                 $article_list = Article::ArticleList([
-                    'cate_id'=>$cate_info['id'],
-                    'paginate'=>12,
+                    'cate_id_in'=>sub_cate_in($cate_info['id']),
+                    // 'cate_id'=>$cate_info['id'],
+                    'paginate'=>$paginate,
                 ]);
                 $assign['article_list'] = $article_list;
                 //获取推荐
@@ -130,8 +161,13 @@ class ArticleController extends Controller
                     'take'=>$take,
                 ]);
                 $assign['article_recommend_list'] = $article_recommend_list;
-                $assign['banner'] = ads_image_name($top_category['title']);
+                if(isMobile()){
+                    $assign['banner'] = ads_image_name("手机-".$top_category['title']);
+                }else{
+                    $assign['banner'] = ads_image_name($top_category['title']);
+                }
                 break;
+                
             // case 'single-detail'://单页
             //     //获取全部列表数据
             //     $article_list = Article::ArticleList([
@@ -141,7 +177,11 @@ class ArticleController extends Controller
             //     $assign['article_list'] = $article_list;
             //     break;
         }
-        return view('home.article.'.$cate_info['template'],$assign);
+        if(isMobile()){
+            return view('mobile.article.'.$cate_info['template'],$assign);
+        }else{
+            return view('home.article.'.$cate_info['template'],$assign);
+        }
     }
     /**
      * 文章详情
@@ -203,6 +243,7 @@ class ArticleController extends Controller
             case 'news'://新闻列表
             case 'cases'://案例
             case 'teacher'://师资
+            case 'course'://课程
                 //获取推荐
                 $article_recommend_list = Article::ArticleList([
                     'cate_id'=>$recommend_cate,
@@ -228,10 +269,19 @@ class ArticleController extends Controller
                 $next_article = Article::find($next_id);
                 $assign['next_article'] = $next_article;
 
-                $assign['banner'] = ads_image_name($top_category['title']);
+                if(isMobile()){
+                    $assign['banner'] = ads_image_name("手机-".$top_category['title']);
+                }else{
+                    $assign['banner'] = ads_image_name($top_category['title']);
+                }
                 break;
             case 'personnel'://人员
         }
-        return view('home.article.'.$cate_info['template']."-info",$assign);
+        if(isMobile()){
+            return view('mobile.article.'.$cate_info['template']."-info",$assign);
+        }else{
+            return view('home.article.'.$cate_info['template']."-info",$assign);
+        }
+
     }
 }

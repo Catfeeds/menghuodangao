@@ -122,7 +122,9 @@ EOT;
             $nav_options[0] = '顶级';
             $nav = Nav::orderBy('order',"ASC")->where('type',$type)->get()->toarray();
             $nav_options += optionsDate(getTree($nav));
-
+            if($type==0||$type==4){
+              $form->image('ico','图标')->move('/uploads/ico/'.date('Ymd'))->uniqueName();
+            }
             $form->select('parent_id','所属')->options($nav_options);
             $states = [
                 'on'  => ['value' => 1, 'text' => '是', 'color' => 'success'],

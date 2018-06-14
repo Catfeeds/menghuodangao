@@ -17,32 +17,32 @@
             <div class="layout">
                 <div class="titimg"><img src="{{asset($v['img'])}}" alt="{{$v['alt']}}"></div>
                 <dl class="clearfix cou_list">
-                    @foreach($v['article'] as $k=>$v)
-                        @if($k%4 < 2)
+                    @foreach($v['article'] as $k2=>$v2)
+                        @if($k2%4 < 2)
                         <dd class="clearfix">
-                            <div class="pich fl"><a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}"><img src="{{asset($v['img'])}}" alt="{{$v['alt']}}"></a></div>
+                            <div class="pich fl"><a href="{{URL('show-'.$v2['cate_id'].'-'.$v2['id'].'-1.html')}}"><img src="{{asset($v2['img'])}}" alt="{{$v2['alt']}}"></a></div>
                             <div class="box fr">
-                                <div class="pic"><img src="{{asset($v['img2'])}}" alt="{{$v['alt2']}}"></div>
-                                <div class="p1" title="{{$v['en_title']}}">{{$v['en_title']}}</div>
-                                <div class="p2" title="{{$v['title']}}">{{$v['title']}}</div>
+                                <div class="pic"><img src="{{asset($v2['img2'])}}" alt="{{$v2['alt2']}}"></div>
+                                <div class="p1" title="{{$v2['en_title']}}">{{$v2['en_title']}}</div>
+                                <div class="p2" title="{{$v2['title']}}">{{$v2['title']}}</div>
                                 <div class="p3">
-                                    {!!nl2br($v['desc'])!!}
+                                    {!!nl2br($v2['desc'])!!}
                                 </div>
-                                <a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}" class="mbtn"><b>了解详情</b></a>
+                                <a href="{{URL('show-'.$v2['cate_id'].'-'.$v2['id'].'-1.html')}}" class="mbtn"><b>了解详情</b></a>
                             </div>
                         </dd>
                         @else
                         <dd class="clearfix">
                             <div class="box fl">
-                                <div class="pic"><img src="{{asset($v['img2'])}}" alt="{{$v['alt2']}}"></div>
-                                <div class="p1" title="{{$v['en_title']}}">{{$v['en_title']}}</div>
-                                <div class="p2" title="{{$v['title']}}">{{$v['title']}}</div>
+                                <div class="pic"><img src="{{asset($v2['img2'])}}" alt="{{$v2['alt2']}}"></div>
+                                <div class="p1" title="{{$v2['en_title']}}">{{$v2['en_title']}}</div>
+                                <div class="p2" title="{{$v2['title']}}">{{$v2['title']}}</div>
                                 <div class="p3">
-                                    {!!nl2br($v['desc'])!!}
+                                    {!!nl2br($v2['desc'])!!}
                                 </div>
-                                <a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}" class="mbtn"><b>了解详情</b></a>
+                                <a href="{{URL('show-'.$v2['cate_id'].'-'.$v2['id'].'-1.html')}}" class="mbtn"><b>了解详情</b></a>
                             </div>
-                            <div class="pich fr"><a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}"><img src="{{asset($v['img'])}}" alt="{{$v['alt']}}"></a></div>
+                            <div class="pich fr"><a href="{{URL('show-'.$v2['cate_id'].'-'.$v2['id'].'-1.html')}}"><img src="{{asset($v2['img'])}}" alt="{{$v2['alt']}}"></a></div>
                         </dd>
                         @endif
                     @endforeach

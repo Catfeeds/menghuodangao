@@ -332,3 +332,17 @@ function isMobile() {
   } 
   return false;
 }
+/**
+ * 获取某个文章详情
+ */
+function f_article_info($id){
+    $info = Article::find($id);
+    return $info;
+}
+/**
+ * 获取某个分类详情
+ */
+function f_article_cate_info($id){
+    $info = ArticleCategory::find($id);
+    return $info;
+}

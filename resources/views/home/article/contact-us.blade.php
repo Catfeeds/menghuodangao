@@ -23,7 +23,7 @@
 @endsection
 @section('script')
     @parent
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=c2AOMaFjyxR1itkA2z1yWOKysUgdjE6I"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nLZl2YQ4udh4GdGhsz5aoWenY2gOEkLQ"></script>
     <script type="text/javascript">
         // 百度地图API功能
         var map = new BMap.Map("allmap");

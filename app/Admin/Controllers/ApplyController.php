@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Apply,App\Models\ArticleCategory;
+use App\Models\Apply,App\Models\Article;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -72,8 +72,9 @@ class ApplyController extends Controller
             $grid->id('ID')->sortable();
             $grid->column('name',"姓名");
             $grid->column('phone',"联系电话");
-            $grid->column('age',"年龄");
-            $grid->column('address',"联系地址")->sortable();
+            $grid->ArticleTo()->title('报名课程');
+            // $grid->column('age',"年龄");
+            // $grid->column('address',"联系地址")->sortable();
             
         });
 
@@ -89,25 +90,25 @@ class ApplyController extends Controller
         return Admin::form(Apply::class, function (Form $form) use ($cate_id){
             $form->display('name', '姓名');
             $form->display('phone', '联系电话');
-            $form->display('age', '年龄');
-            $form->display('address', '联系地址');
-            $form->display('years', '学画时间')->with(function ($value) {
-                switch ($value) {
-                    case '1':
-                        return '半年';
-                        break;
-                    case '2':
-                        return '半年至一年';
-                        break;
-                    case '3':
-                        return '一年以上';
-                        break;
-                }
-            });
-            $form->display('cate_id', '意向班级')->with(function ($value) {
+            // $form->display('age', '年龄');
+            // $form->display('address', '联系地址');
+            // $form->display('years', '学画时间')->with(function ($value) {
+            //     switch ($value) {
+            //         case '1':
+            //             return '半年';
+            //             break;
+            //         case '2':
+            //             return '半年至一年';
+            //             break;
+            //         case '3':
+            //             return '一年以上';
+            //             break;
+            //     }
+            // });
+            $form->display('course_id', '报名的课程')->with(function ($value) {
                 if($value>0){
-                    $cate_info = ArticleCategory::find($value);
-                    return $cate_info['title'];
+                    $article = Article::find($value);
+                    return $article['title'];
                 }else{
                     return "无";
                 }
