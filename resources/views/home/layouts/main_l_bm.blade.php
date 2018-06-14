@@ -3,5 +3,5 @@
         <h3>咨询报名</h3>
         <span class="title_bg"></span>
     </div>
-    <a href="#" class="more">立即咨询</a>
+    <a href="{{ConfigGet('kefu_53')}}" class="more">立即咨询</a>
 </div>

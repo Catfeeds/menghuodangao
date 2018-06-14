@@ -62,7 +62,7 @@
                         <div class="twobtn">
                             <div class="dis">
                                 <a href="{{URL('list-'.$index_1_cate['id'].'-1.html')}}">查看更多课程</a>
-                                <a >获取课程报价</a>
+                                <a href="{{ConfigGet('kefu_53')}}" target="_blank">获取课程报价</a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
         </div>
         <div class="twobtn">
             <div class="dis">
-                <a >课程咨询</a>
+                <a href="{{ConfigGet('kefu_53')}}" target="_blank">课程咨询</a>
             </div>
         </div>
     </div>
@@ -247,7 +247,7 @@
         </dl>
         <div class="twobtn">
             <div class="dis">
-                <a >课程咨询</a>
+                <a href="{{ConfigGet('kefu_53')}}" target="_blank">课程咨询</a>
             </div>
         </div>
     </div>

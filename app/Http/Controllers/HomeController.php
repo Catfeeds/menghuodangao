@@ -35,6 +35,7 @@ class HomeController extends Controller
                 'sort'=>'DESC',
                 'paginate'=>4,
             ]);
+            $index_2_cate = ArticleCategory::find(8);
             $index_6 =  Article::ArticleList([
                 'cate_id'=>319,
                 'order'=>'is_top',
@@ -72,6 +73,7 @@ class HomeController extends Controller
                 'banner'         => $banner,
                 'index_1'        => $index_1,
                 'index_2'        => $index_2,
+                'index_2_cate'        => $index_2_cate,
                 'index_6'        => $index_6,
                 'index_6_cate'   => $index_6_cate,
                 'index_8'        => $index_8,
