@@ -65,7 +65,7 @@ img{
 	-moz-transition:all 0.5s;
 	-webkit-transition:all 0.5s;
 	-ms-transition:all 0.5s;
-	width: 333px;height: 320px;
+	/*width: 333px;height: 320px;*/
 }
 .pich:hover img{
 	transform:scale(1.1);
@@ -1155,7 +1155,7 @@ img{
 	color: #ffffff;
 	line-height: 22px;
 	text-indent: 2em;
-	height: 66px;
+	/*height: 66px;*/
 	overflow: hidden;
 }
 .brand4 .tabpic .slick-prev, 

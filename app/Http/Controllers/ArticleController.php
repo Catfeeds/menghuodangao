@@ -29,7 +29,7 @@ class ArticleController extends Controller
         // $cate_info = ArticleCategory::with(['MoreImageMany'])->where('url',$url)->first();
         $cate_info = ArticleCategory::with(['MoreImageMany'])->where('id',$cate_id)->first();
         if (!$cate_info||empty($cate_info['template'])) {
-            return back();
+            abort(404);
         }
         $top_category = top_category($cate_info,ArticleCategory::class,'parent_id');//获取顶级分类
         $sub_category = ArticleCategory::orderBy('order',"ASC")->where('parent_id',$top_category['id'])->get();//获取一级分类
@@ -190,11 +190,11 @@ class ArticleController extends Controller
         Article::where("id",$id)->increment('click',1);
         $info = Article::with(['ArticleCategoryTo','MoreImageMany'])->find($id);
         if (!$info) {
-            return back();
+            abort(404);
         }
         $cate_info = $info['ArticleCategoryTo'];
         if (!$cate_info||empty($cate_info['template'])) {
-            return back();
+            abort(404);
         }
         $top_category = top_category($cate_info,ArticleCategory::class,'parent_id');//获取顶级分类
         $sub_category = ArticleCategory::orderBy('order',"ASC")->where('parent_id',$top_category['id'])->get();//获取一级分类

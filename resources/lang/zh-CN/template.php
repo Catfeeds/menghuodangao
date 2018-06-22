@@ -32,7 +32,7 @@ return [
 
 		'student-story-index'=>"创业学员故事",
 		'student-story'=>"学员故事",
-		'media-witness'=>"媒体见证",
+		// 'media-witness'=>"媒体见证",
 
 		// 'personnel'=>"人员列表",
 

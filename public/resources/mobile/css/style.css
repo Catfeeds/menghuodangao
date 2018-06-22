@@ -654,7 +654,7 @@ text-overflow: ellipsis;
 	padding: 0 .3rem;
 }
 .cou_list ul li{
-	line-height: .65rem;
+	line-height: .75rem;
 	border-bottom: 1px #ededed solid;
 }
 .cou_list ul a{
@@ -1098,7 +1098,7 @@ text-overflow: ellipsis;
 	padding: .2rem .1rem 0;
 }
 .news_list ul li{
-	line-height: .68rem;
+	line-height: .78rem;
 	border-bottom: 1px #cccccc dashed;
 }
 .news_list ul a{

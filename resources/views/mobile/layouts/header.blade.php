@@ -24,7 +24,7 @@
     @else
     <div class="menu">
         <div class="submenu">
-            <ul>
+            <ul><li><a href="/">首页</a></li>
                 @foreach(nav(5) as $k=>$v)
                 <li><a @if(!empty($v['url'])) href="{{$v['url']}}" @endif @if($v['is_blank']) target="_blank" @endif title="{{$v['title']}}">{{$v['title']}}</a></li>
                 @endforeach

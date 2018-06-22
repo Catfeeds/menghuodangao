@@ -56,6 +56,16 @@
                 </script>
             </div>
         </div>
-        <div class="copyright layout">{{ConfigGet('copyright')}} {{ConfigGet('beian')}} <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273747108'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1273747108%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        <div class="copyright layout">{{ConfigGet('copyright')}} {{ConfigGet('beian')}}<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261144045'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1261144045%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
     </div>
+    <!--53客服end-->
+      <script>
+        (function() {
+          var _53code = document.createElement("script");
+          _53code.src = "//tb.53kf.com/code/code/10130455/1";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(_53code, s);
+        })();
+      </script>
+      <!--end-->
 @show

@@ -12,6 +12,9 @@
                     <p>时间：{{date('Y-m-d H:i',strtotime($info['add_time']))}}<em>来源：{{$info['editor']}}</em></p>
                 </div>
                 <div class="con">
+                    @if(!empty($info['video']))
+                        <iframe frameborder="0" width="100%" src="{{$info['video']}}" allowfullscreen></iframe>
+                    @endif
                     {!!$info['content']!!}
                 </div>
                 @include("home.layouts.pagebox")

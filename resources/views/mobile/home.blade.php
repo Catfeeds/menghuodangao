@@ -108,7 +108,7 @@
                 <div class="swiper-slide">
                     <ul>
                         @foreach($i8['article'] as $k=>$v)
-                        <li><a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}">@if(!empty($v['tag']))<p @if($v['tag']=='头条') class="p1" @endif>{{$v['tag']}}</p>@endif<span>{{$v['title']}}</span><!-- <i>120</i> --></a></li>
+                        <li><a href="{{URL('show-'.$v['cate_id'].'-'.$v['id'].'-1.html')}}">@if(!empty($v['tag']))<p @if($v['tag']=='头条') class="p1" @endif>{{$v['tag']}}</p>@endif<span>{{$v['title']}}</span><i>{{$v['click']}}</i></a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -162,7 +162,7 @@
             });
             var mes=new Swiper('.mes',{
                 loop:true,
-                autoplay: 2000,
+                autoplay: 3000,
                 direction: 'vertical'
             });
             var dongt=new Swiper('.dongt',{

@@ -5,7 +5,7 @@
 @section('content')
 @include('mobile.layouts.banner')
 @foreach($cate_list as $k_c=>$v_c)
-@if($v_c['template']=='student-story')
+@if($v_c['template']=='media-witness')
 <div class="story_list">
     <div class="tit">{{$v_c['title']}}</div>
     <ul class="clearfix">
@@ -20,9 +20,9 @@
         @endforeach
     </ul>
 </div>
-@elseif($v_c['template']=='media-witness')
+@elseif($v_c['template']=='cases')
 <div class="story_list">
-    <div class="tit">{{$v_c['title']}}</div>
+    <div class="tit">{{$v_c['title']='学员案例'?'媒体见证':$v_c['title']}}</div>
     <ul class="clearfix">
         @foreach($v_c['article'] as $k=>$v)
         <li>

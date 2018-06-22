@@ -6,6 +6,8 @@
         .map img{width: auto;height: auto;max-width: auto;}
         .abuot .mobile_content .tit{overflow: hidden;}
         .abuot .mobile_content .tit img{height:1rem !important;max-width: 20rem !important;width: 20rem !important;position: relative;left: 50%;margin-left: -10rem;}
+        .abuot .box2{display: none;}
+        .abuot .box2_tit{display: none;}
     </style>
 @endsection
 @section('content')

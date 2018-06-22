@@ -73,7 +73,7 @@
 	color: #22b6aa;
 }
 
-.layout img{max-width: 100%;width: auto;}
+.layout img{max-width: 100%;width: auto;height:auto;}
 
 
 .course-info img{max-width: 100%;width: auto;margin:0 auto;display: block;}

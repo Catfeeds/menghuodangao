@@ -150,7 +150,7 @@
 
                         <div class="pich"><img src="{{asset($v2['img'])}}" alt="{{$v2['alt']}}"></div>
 
-                        <p>{{$v['title']}}</p>
+                        <p>{{$v2['title']}}</p>
 
                     </a>
 
