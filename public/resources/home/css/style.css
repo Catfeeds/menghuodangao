@@ -1616,6 +1616,7 @@ img{
 .news_det .con{
 	padding: 10px 30px 54px;
 	border-bottom: 1px #d3d3d3 solid;
+	overflow: hidden;
 }
 .news_det .con .p1{
 	font-size: 14px;

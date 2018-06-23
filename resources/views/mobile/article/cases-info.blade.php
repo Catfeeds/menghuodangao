@@ -1,29 +1,20 @@
-@extends('home.layouts.app')
+@extends('mobile.layouts.app')
 @section('style')
     @parent
 @endsection
 @section('content')
-<div class="main">
-    <div class="clearfix">
-        <div class="ml">
-            <div class="news_det">
-                <div class="tit">
-                    <h3>{{$info['title'] or ''}}</h3>
-                    <p>时间：{{date('Y-m-d H:i',strtotime($info['add_time']))}}<em>来源：{{$info['editor']}}</em></p>
-                </div>
-                <div class="con">
-                    @if(!empty($info['video']))
-                        <iframe frameborder="0" width="100%" src="{{$info['video']}}" allowfullscreen></iframe>
-                    @endif
-                    {!!$info['content']!!}
-                </div>
-                @include("home.layouts.pagebox")
-            </div>
-        </div>
-        @include('home.layouts.hot3')
+<div class="det_box">
+    <div class="tit">{{$info['title'] or ''}}</div>
+    <div class="time">日期：{{date('Y-m-d H:i',strtotime($info['add_time']))}}<em>浏览量：{{$info['click']}}</em></div>
+    <div class="con">
+        @if(!empty($info['video']))
+            <iframe frameborder="0" width="100%" src="{{$info['video']}}" allowfullscreen></iframe>
+        @endif
+        {!!$info['content']!!}
     </div>
-    @include('home.layouts.hot')
 </div>
+@include("mobile.layouts.pagebox")
+@include('mobile.layouts.list_b')
 @endsection
 @section('script')
     @parent

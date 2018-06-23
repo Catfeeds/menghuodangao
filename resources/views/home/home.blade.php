@@ -151,7 +151,8 @@
                 @foreach($index_4 as $k4=>$i4)
                 @if($k4 < 3)
                 <div class="video">
-                    <embed src="{{$i4['video']}}" allowFullScreen="true" quality="high" width="582" height="341" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                    <!-- <embed src="{{$i4['video']}}" allowFullScreen="true" quality="high" width="582" height="341" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed> -->
+                    <iframe frameborder="0" width="582" height="341" src="{{$i4['video']}}" allowfullscreen></iframe>
                 <!-- <img src="images/pic10.jpg"><b></b> -->
                 </div>
                 @endif
