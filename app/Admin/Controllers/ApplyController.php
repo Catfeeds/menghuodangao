@@ -67,12 +67,14 @@ class ApplyController extends Controller
             $grid->disableExport();//禁止导出
             $grid->disableFilter();//禁止筛选
             $grid->disableCreateButton();//禁止创建按钮
+            $grid->disableActions();//禁止操作列
             //默认排序
             $grid->model()->orderBy('created_at','DESC')->orderBy('id','DESC');
             $grid->id('ID')->sortable();
             $grid->column('name',"姓名");
             $grid->column('phone',"联系电话");
             $grid->ArticleTo()->title('报名课程');
+            $grid->column('created_at',"提交时间");
             // $grid->column('age',"年龄");
             // $grid->column('address',"联系地址")->sortable();
             
@@ -113,6 +115,7 @@ class ApplyController extends Controller
                     return "无";
                 }
             });
+            $form->display('created_at', '提交时间');
             
         });
     }
